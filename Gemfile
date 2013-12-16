@@ -6,6 +6,7 @@ gem 'haml'
 gem 'bcrypt-ruby', '3.0.0'
 gem 'youtube_it'
 gem 'soundcloud'
+gem 'url_scraper'
 
 gem 'rails_12factor', group: :production
 

@@ -4,6 +4,6 @@ development:
   database: linklove_app_development
   pool: 5
   host: localhost
-  username: matthewthees
+  username:
   password:
-  cucumber:
+  #cucumber:

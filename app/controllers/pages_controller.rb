@@ -12,6 +12,9 @@ class PagesController < ApplicationController
     #display form to share the page that the bookmarklet was clicked from
   end
 
+  def public_stream
+  end
+
   private
   def check_if_logged_in
     unless user_signed_in?

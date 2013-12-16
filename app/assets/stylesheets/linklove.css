@@ -5,3 +5,13 @@ font-family: 'Roboto Condensed', sans-serif;*/
 .starter-template .h1 {
   font-family: "Roboto Slab";
 }
+
+.col-md-5 .nice-stuff {
+  height: 400px;
+  background-color: grey;
+}
+
+.col-md-5 .cloudy-thing {
+  height: 400px;
+  background-color: yellow;
+}

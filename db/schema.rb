@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131215070752) do
+ActiveRecord::Schema.define(:version => 20131216064753) do
 
   create_table "gutentag_taggings", :force => true do |t|
     t.integer  "tag_id",        :null => false
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20131215070752) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "profile_pic"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

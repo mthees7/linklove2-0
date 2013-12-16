@@ -11,4 +11,4 @@ Feature: User sign up and registration
     Given I am on the login page
     And I have already registered as "test@example.com"
     When I login with correct email address "test@example.com"
-    Then I should see "logged in as 'test.example.com'"
+    Then I should see "logged in as test@example.com"

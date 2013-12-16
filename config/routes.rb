@@ -3,5 +3,5 @@ LinkloveApp::Application.routes.draw do
 
   root :to => 'pages#home'
 
-  get '/streamify/:url' => 'pages#streamify'
+  get '/streamify' => 'pages#streamify'
 end

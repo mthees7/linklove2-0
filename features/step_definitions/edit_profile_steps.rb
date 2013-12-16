@@ -1,9 +1,9 @@
 Given(/^I am logged in$/) do
-  pending # express the regexp above with the code you wish you had
+  @user = FactoryGirl.create(:user)
 end
 
 When(/^I go to the edit profile page$/) do
-  pending # express the regexp above with the code you wish you had
+  visit('/users/edit')
 end
 
 Then(/^I should see how many streams I am part of$/) do
@@ -15,9 +15,10 @@ Then(/^how many links I have loved$/) do
 end
 
 Then(/^be able to upload a profile picture$/) do
-  pending # express the regexp above with the code you wish you had
+  visit('/users/edit')
+  find_field('profile_pic')
 end
 
 Then(/^be able to change my password$/) do
-  pending # express the regexp above with the code you wish you had
+   find_field('password')
 end

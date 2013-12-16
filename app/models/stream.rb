@@ -15,4 +15,13 @@ class Stream < ActiveRecord::Base
   has_and_belongs_to_many :users
   has_many :posts
   has_many :statuses
+
+  validate :users_cannot_be_greater_than_two
+
+  def users_cannot_be_greater_than_two
+    if user.count > 2
+      errors.add(:users, "can't be greater than two")
+    end
+  end
+
 end

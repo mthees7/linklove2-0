@@ -26,8 +26,9 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :profile_pic
   # attr_accessible :title, :body
-  has_and_belongs_to_many :streams
-  has_many :posts, through: :streams
-  has_many :statuses, through: :streams
+  has_many :memberships
+  has_many :streams, through: :memberships
+  # has_many :posts, through: :streams
+  # has_many :statuses, through: :streams
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131216064753) do
+ActiveRecord::Schema.define(:version => 20131216223534) do
 
   create_table "gutentag_taggings", :force => true do |t|
     t.integer  "tag_id",        :null => false
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(:version => 20131216064753) do
   add_index "gutentag_tags", ["name"], :name => "index_gutentag_tags_on_name", :unique => true
   add_index "gutentag_tags", ["taggings_count"], :name => "index_gutentag_tags_on_taggings_count"
 
+  create_table "memberships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "stream_id"
+    t.text     "status"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "posts", :force => true do |t|
     t.integer  "stream_id"
     t.string   "title"
@@ -53,7 +61,6 @@ ActiveRecord::Schema.define(:version => 20131216064753) do
   end
 
   create_table "streams", :force => true do |t|
-    t.integer  "user_id"
     t.string   "name"
     t.string   "image"
     t.datetime "created_at", :null => false

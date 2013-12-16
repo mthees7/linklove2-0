@@ -1,9 +1,29 @@
-<table>
-  <tbody>
-    <%current_user.streams.each do |stream|%>
-      <tr>
-        <td><%= stream.name %></td>
-      </tr>
-    <%end%>
-    </tbody>
-</table>
+<h1>Streams</h1>
+
+<div class="streams_table">
+  <%if current_user.streams.present? %>
+
+    <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke">
+      <thead>
+        <tr>
+          <th data-priority="1"></th>
+          <th data-priority="persist">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% i = 1 %>
+        <%current_user.streams.each do |stream|%>
+          <tr>
+            <th><%= i %></th>
+            <td><%= stream.name %></td>
+            <%i = i + 1%>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>
+
+  <%else%>
+    <h3>You don't have any Streams!</h3>
+    <h5><a href="/index">Click Here</a> to create one.</h5>
+  <%end%>
+</div>

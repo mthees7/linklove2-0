@@ -29,4 +29,5 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :streams
   has_many :posts, through: :streams
   has_many :statuses, through: :streams
+
 end

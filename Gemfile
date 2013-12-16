@@ -29,6 +29,7 @@ gem 'devise'
 gem 'sextant'
 gem 'factory_girl_rails'
 gem 'gutentag', '~> 0.5.0'
+gem 'faker'
 
 group :development, :test do
   gem 'pry-rails'

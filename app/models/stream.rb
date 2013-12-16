@@ -11,15 +11,15 @@
 #
 
 class Stream < ActiveRecord::Base
-  attr_accessible :user_id, :name, :image
-  has_and_belongs_to_many :users
+  attr_accessible: :name, :image
   has_many :posts
-  has_many :statuses
+  has_many :memberships
+  has_many :users, through: :memberships
 
   validate :users_cannot_be_greater_than_two
 
   def users_cannot_be_greater_than_two
-    if user.count > 2
+    if users.size > 2
       errors.add(:users, "can't be greater than two")
     end
   end

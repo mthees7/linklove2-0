@@ -13,6 +13,6 @@
 
 class Post < ActiveRecord::Base
   attr_accessible :stream_id, :title, :message, :url
-  #need to change title to message
   has_many_tags
+
 end

@@ -20,7 +20,7 @@ class StreamsController < ApplicationController
     @stream.users << invited_user
     @stream.users << current_user
     if @stream.save
-      UserMailer.invitation_email(invited_user, params[:stream][:message], current_user, @stream).deliver
+      UserMailer.invitation_email(invited_user.email, @pass, params[:stream][:message], current_user, @stream).deliver
       # redirect
       redirect_to stream_path(@stream)
     else

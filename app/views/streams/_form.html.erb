@@ -1,0 +1,32 @@
+<%= form_for @stream do |f| %>
+<div class = "form group">
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true, :class => 'form-control', :placeholder => "What do you want to call this stream?"  %>
+</div>
+
+<div class = "form group">
+  <%= f.label :image %>
+  <%= f.text_field :image, :autofocus => true, :class => 'form-control', :placeholder => "Upload an image for your stream..."  %>
+</div>
+
+<div class = "form group">
+  <%= f.label :invited_user %>
+  <%= f.text_field :invited_user, :class => 'form-control' %>
+</div>
+
+<%=f.submit "Save and continue", :class => 'btn btn-primary' %>
+
+<% end %>
+
+<%= form_tag '', :role => 'form' do %>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" placeholder="Enter email to invite a friend">
+  </div>
+
+  <div class="form-group">
+    <label for="email-message">Add a Message</label>
+    <input type="email-message" class="form-control">
+  </div>
+
+<% end %>

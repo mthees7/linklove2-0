@@ -11,7 +11,7 @@
 #
 
 class Stream < ActiveRecord::Base
-  attr_accessible :name, :image
+  attr_accessible :name, :image #, :invited_user
   has_many :posts
   has_many :memberships
   has_many :users, through: :memberships
@@ -22,6 +22,14 @@ class Stream < ActiveRecord::Base
     if users.size > 2
       errors.add(:users, "can't be greater than two")
     end
+  end
+
+  def invited_user
+    @invited_user
+  end
+
+  def invite_user=(email)
+    @invited_user = email
   end
 
 end

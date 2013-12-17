@@ -2,8 +2,8 @@ User.destroy_all
 Stream.destroy_all
 Post.destroy_all
 
-u1 = User.create(:email => 'jen@leveltwo.com.au')
-u2 = User.create(:email => 'beccy@gmail.com')
+u1 = User.create(:email => 'jen@level22.com.au', :password => "password1234", :password_confirmation => "password1234" )
+u2 = User.create(:email => 'beccy@gmail.com', :password => "password5678", :password_confirmation => "password5678" )
 
 s1 = Stream.create(:name => "Jen and Bec's Awesome Stream")
 

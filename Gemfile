@@ -4,8 +4,6 @@ gem 'rails', '3.2.14'
 gem 'pg'
 gem 'haml'
 gem 'bcrypt-ruby', '3.0.0'
-gem 'youtube_it'
-gem 'soundcloud'
 gem 'url_scraper'
 
 gem 'rails_12factor', group: :production
@@ -31,6 +29,7 @@ gem 'sextant'
 gem 'factory_girl_rails'
 gem 'gutentag', '~> 0.5.0'
 gem 'faker'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'pry-rails'

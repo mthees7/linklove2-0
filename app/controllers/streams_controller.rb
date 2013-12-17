@@ -26,12 +26,10 @@ class StreamsController < ApplicationController
     else
       render :new
     end
-
   end
 
   def edit
     @stream = Stream.find params[:id]
-
     render 'streams/edit'
   end
 
@@ -41,4 +39,9 @@ class StreamsController < ApplicationController
     redirect_to streams_path
   end
 
+  def update
+    @stream = Stream.find params[:id]
+    @stream.save
+    redirect_to streams_path
+  end
 end

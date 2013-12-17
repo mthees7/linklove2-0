@@ -15,8 +15,11 @@
         <%current_user.streams.each do |stream|%>
           <tr>
             <th><%= i %></th>
-            <td><%= stream.name %></td>
+            <td><%= stream.name %>
             <%i = i + 1%>
+              <span><%= link_to 'Edit', edit_stream_path(stream.id) %></span>
+              <span><%= link_to 'Delete', stream_path(stream.id), :method => 'delete' %></span>
+            </td>
           </tr>
         <%end%>
       </tbody>
@@ -24,6 +27,6 @@
 
   <%else%>
     <h3>You don't have any Streams!</h3>
-    <h5><a href="/index">Click Here</a> to create one.</h5>
+    <h5><a href="/streams/new">Click Here</a> to create one.</h5>
   <%end%>
 </div>

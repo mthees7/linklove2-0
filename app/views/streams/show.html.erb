@@ -1,1 +1,14 @@
-<%= image_tag @stream.image_url %>
+<li><%= image_tag @stream.image_url if @stream.image? %></li>
+
+<ol>
+  <% @stream.posts.each do |post| %>
+    <li>
+      <ul>
+        <li><%= post.title %></li>
+        <li><%= post.message %></li>
+        <li><a href="<%= post.url %>" target="_blank" data-rel="external"><%=post.url%></a></li>
+      </ul>
+    </li>
+  <% end %>
+</ol>
+

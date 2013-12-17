@@ -1,5 +1,9 @@
 LinkloveApp::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {:confirmations => 'confirmations'}
+
+  devise_scope :user do
+    put "/confirm" => "confirmations#confirm"
+  end
   resources :streams
   root :to => 'pages#home'
 
@@ -8,3 +12,7 @@ LinkloveApp::Application.routes.draw do
 
   match '/scrape_url' => "UrlScraper#scrape", :via => :post
 end
+
+
+
+

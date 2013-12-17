@@ -3,7 +3,6 @@
 # Table name: streams
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
 #  name       :string(255)
 #  image      :string(255)
 #  created_at :datetime         not null

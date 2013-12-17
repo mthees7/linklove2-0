@@ -7,7 +7,7 @@
       <thead>
         <tr>
           <th data-priority="1"></th>
-          <th data-priority="persist">Name</th>
+          <th data-priority="persist">Your Streams</th>
         </tr>
       </thead>
       <tbody>
@@ -15,13 +15,14 @@
         <%current_user.streams.each do |stream|%>
           <tr>
             <th><%= i %></th>
-            <td><%= stream.name %>
+            <td><a href="/streams/<%= stream.id %>"><%= stream.name %></a>
             <%i = i + 1%>
               <span><%= link_to 'Edit', edit_stream_path(stream.id) %></span>
               <span><%= link_to 'Delete', stream_path(stream.id), :method => 'delete' %></span>
             </td>
           </tr>
         <%end%>
+        <h5><a href="/streams/new">Click Here</a> to create a new stream.</h5>
       </tbody>
     </table>
 

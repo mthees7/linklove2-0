@@ -4,7 +4,11 @@ LinkloveApp::Application.routes.draw do
   devise_scope :user do
     put "/confirm" => "confirmations#confirm"
   end
+
   resources :streams
+  resources :posts
+
+
   root :to => 'pages#home'
 
   get '/streamify' => 'pages#streamify'

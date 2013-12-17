@@ -6,12 +6,17 @@ font-family: 'Roboto Condensed', sans-serif;*/
   font-family: "Roboto Slab";
 }
 
-.col-md-5 .nice-stuff {
+div.col-md-5.nice-stuff {
   height: 400px;
   background-color: grey;
 }
 
-.col-md-5 .cloudy-thing {
+div.col-md-5.cloud-thingy {
   height: 400px;
   background-color: yellow;
+}
+
+.public {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

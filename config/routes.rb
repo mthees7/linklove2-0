@@ -5,4 +5,6 @@ LinkloveApp::Application.routes.draw do
 
   get '/streamify' => 'pages#streamify'
   get '/public-stream' => 'pages#public_stream'
+
+  match '/scrape_url' => "UrlScraper#scrape", :via => :post
 end

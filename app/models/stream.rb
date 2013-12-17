@@ -16,6 +16,7 @@ class Stream < ActiveRecord::Base
   has_many :users, through: :memberships
 
   validate :users_cannot_be_greater_than_two
+  mount_uploader :image, ImageUploader
 
   def users_cannot_be_greater_than_two
     if users.size > 2

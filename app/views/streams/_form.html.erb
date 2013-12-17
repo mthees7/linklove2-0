@@ -1,12 +1,11 @@
-<%= form_for @stream do |f| %>
+<%= form_for @stream, :html => {:multipart => true } do |f| %>
 <div class = "form group">
   <%= f.label :name %>
   <%= f.text_field :name, :autofocus => true, :class => 'form-control', :placeholder => "What do you want to call this stream?"  %>
 </div>
 
 <div class = "form group">
-  <%= f.label :image %>
-  <%= f.text_field :image, :autofocus => true, :class => 'form-control', :placeholder => "Upload an image for your stream..."  %>
+  <%= f.file_field :image %>
 </div>
 
 <div class = "form group">

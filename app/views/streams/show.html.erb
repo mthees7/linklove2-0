@@ -5,7 +5,6 @@
 
 <div><%= image_tag @stream.image_url(:fit) if @stream.image? %></div>
 
-
 <li><%= image_tag @stream.users[0].profile_pic_url(:thumb) if @stream.users[0].profile_pic? %></li>
 <li><%= image_tag @stream.users[1].profile_pic_url(:thumb) if @stream.users[1].profile_pic? %></li>
 

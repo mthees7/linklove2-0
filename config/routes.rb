@@ -14,10 +14,7 @@ LinkloveApp::Application.routes.draw do
 
   get '/streamify' => 'pages#streamify'
   get '/public-stream' => 'pages#public_stream'
+  get '/streams/:id/:tag', to: 'streams#index_by_tag', as: :tag
 
   match '/scrape_url' => "UrlScraper#scrape", :via => :post
 end
-
-
-
-

@@ -1,12 +1,22 @@
 
 <h1> Stream View </h1>
+<h1><%= @stream.posts.length %></h1>
 
 <h5><a href="<%= new_stream_post_path(@stream) %>">Click Here</a> to create a new post.</h5>
 
 <div><%= image_tag @stream.image_url(:fit) if @stream.image? %></div>
 
 <li><%= image_tag @stream.users[0].profile_pic_url(:thumb) if @stream.users[0].profile_pic? %></li>
+
+<% number1 = @stream.users[0].posts.length %>
+<% number2 = @stream.users[1].posts.length %>
+
+<h1><%= number_to_percentage(number1.to_f / (number2 + number1) * 100, precision: 0) %></h1>
+
+</br>
+
 <li><%= image_tag @stream.users[1].profile_pic_url(:thumb) if @stream.users[1].profile_pic? %></li>
+<h1><%= number_to_percentage(number2.to_f / (number1 + number2) * 100, precision: 0) %></h1>
 
 <ol>
   <% @stream.posts.order(:created_at).reverse.each do |post| %>
@@ -14,15 +24,15 @@
       <ul>
         <li><%= post.title %></li>
         <li><%= post.message %></li>
+        <li>Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(post.stream_id, t) }.join(', ') %></li>
         <li><a href="<%= post.url %>" target="_blank" data-rel="external">Check it out!</a></li>
       <h1>ids: <%= post.user_id %>, <%= current_user.id %></h1>
 
       <% if post.user_id == current_user.id %>
-        <li><a href="/posts/<%= post.id %>/edit">Edit Post</a></li>
+        <li><a href="<%= edit_stream_post_path(@stream.id, post.id) %>">Edit Post</a></li>
         <%= button_to "Delete", post_path(post), :data => {:confirm => 'Are you sure?'}, :method => :delete %>
       <% end %>
       </ul>
     </li>
   <% end %>
 </ol>
-

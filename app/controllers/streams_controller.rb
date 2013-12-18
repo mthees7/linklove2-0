@@ -2,6 +2,12 @@ class StreamsController < ApplicationController
   def index
   end
 
+  def index_by_tag
+    @stream = Stream.find params[:id]
+    @stream.posts = Post.tagged_with([params[:tag]]).where(:stream_id => params[:id])
+    render :show
+  end
+
   def show
     @stream = Stream.find params[:id]
   end
@@ -43,7 +49,7 @@ class StreamsController < ApplicationController
 
   def update
     @stream = Stream.find params[:id]
-    @stream.save
-    redirect_to streams_path
+    @stream.update_attributes(params[:stream].except(:invited_user, :message))
+    redirect_to stream_path(@stream)
   end
 end

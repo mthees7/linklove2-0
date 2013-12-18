@@ -20,6 +20,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find params[:id]
     @post.update_attributes params[:post]
+
     @post.save
 
     redirect_to stream_path(@post.stream_id)

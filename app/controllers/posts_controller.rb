@@ -5,8 +5,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create params[:id]
-    redirect_to stream_path(@stream)
+    post = Post.new params[:post]
+    post.user_id = current_user.id
+    post.save
+
+    redirect_to stream_path(post.stream_id)
   end
 
   def edit

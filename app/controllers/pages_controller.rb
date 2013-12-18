@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def streamify
+    @post = Post.new
     session[:url] = nil
 
     #make sure user is logged in, if not, prompt login to activate session before proceding

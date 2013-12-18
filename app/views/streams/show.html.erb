@@ -1,7 +1,7 @@
 
 <h1> Stream View </h1>
 
-<h5><a href="/posts/new">Click Here</a> to create a new post.</h5>
+<h5><a href="<%= new_post_path %>">Click Here</a> to create a new post.</h5>
 
 <div><%= image_tag @stream.image_url(:fit) if @stream.image? %></div>
 
@@ -10,15 +10,17 @@
 <li><%= image_tag @stream.users[1].profile_pic_url(:thumb) if @stream.users[1].profile_pic? %></li>
 
 <ol>
-  <% @stream.posts.reverse.each do |post| %>
+  <% @stream.posts.order(:created_at).reverse.each do |post| %>
     <li>
       <ul>
         <li><%= post.title %></li>
         <li><%= post.message %></li>
         <li><a href="<%= post.url %>" target="_blank" data-rel="external">Check it out!</a></li>
+      <h1>ids: <%= post.user_id %>, <%= current_user.id %></h1>
+
       <% if post.user_id == current_user.id %>
         <li><a href="/posts/<%= post.id %>/edit">Edit Post</a></li>
-        <%= button_to "Delete", post_path(post), :data => {:confirm => 'Are you sure?'}, :method => :delete %>
+        <%= button_to "Delete", stream_post_path(post), :data => {:confirm => 'Are you sure?'}, :method => :delete %>
       <% end %>
       </ul>
     </li>

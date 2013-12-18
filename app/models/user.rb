@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
 
   has_many :memberships
   has_many :streams, through: :memberships
-  # has_many :posts, through: :streams
+  has_many :posts
   # has_many :statuses, through: :streams
 
   def password_required?

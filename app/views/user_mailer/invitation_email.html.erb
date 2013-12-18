@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
 </head>
 <body>
-  <h1>Hi there <%= invited_user %>!</h1>
+  <h1>Hi there <%= @invited_user %>!</h1>
   <p>Your friend <%= current_user.email %> has added you to one of his/her personal streams on LinkLove. Streams on LinkLove can only be between two people, so you must be very special.</p>
 
   <%unless message.nil? %>
-    <p>message from <%= current_user.email %></p>
-    <p><%= message %></p>
+    <p>message from <%= @current_user.email %></p>
+    <p><%= @message %></p>
   <%end%>
 
   <p>Accept this invitation by using the following the link below and using the temporary password to log in!</p>
 
-  <p>Your temporary password is: <%= password %></p>
+  <p>Your temporary password is: <%= @password %></p>
   <p>We advise you to change this password upon logging in!</p>
 
-  <p><a href="http://localhost:3000/streams/<%= stream.id %>">Click here to Join the Stream!</a></p>
+  <p><a href="http://localhost:3000/streams/<%= @stream.id %>">Click here to Join the Stream!</a></p>
 
   <p>Happy Sharing,</p>
   <p>The LinkLove Team</p>

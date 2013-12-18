@@ -15,8 +15,21 @@ p3 = Post.create(:title => "This is Post 3!", :message => "OMG!", :url => "http:
 p4 = Post.create(:title => "This is Post 4!", :message => "My fave thing right now", :url => "http://www.google.com")
 p5 = Post.create(:title => "This is Post 5!", :message => "Can't believe it", :url => "http://www.google.com")
 
+u1.posts << p1
+u1.posts << p2
+u1.posts << p3
+
+u1.save
+
+u2.posts << p4
+u2.posts << p5
+
+u2.save
+
 s1.posts << p1
 s1.posts << p2
 s1.posts << p3
 s1.posts << p4
 s1.posts << p5
+
+s1.save

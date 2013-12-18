@@ -1,12 +1,17 @@
-<li><%= image_tag @stream.image_url if @stream.image? %></li>
+<h1> Stream View </h1>
+<div><%= image_tag @stream.image_url if @stream.image? %></div>
 
 <ol>
-  <% @stream.posts.each do |post| %>
+  <% @stream.posts.reverse.each do |post| %>
     <li>
       <ul>
         <li><%= post.title %></li>
         <li><%= post.message %></li>
-        <li><a href="<%= post.url %>" target="_blank" data-rel="external"><%=post.url%></a></li>
+        <li><a href="<%= post.url %>" target="_blank" data-rel="external">Check it out!</a></li>
+      <% if post.user_id == current_user.id %>
+        <li><a href="/posts/<%= post.id %>/edit">Edit Post</a></li>
+        <%= button_to "Delete", post_path(post), :data => {:confirm => 'Are you sure?'}, :method => :delete %>
+      <% end %>
       </ul>
     </li>
   <% end %>

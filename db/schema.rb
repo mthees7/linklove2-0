@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131217055131) do
+ActiveRecord::Schema.define(:version => 20131218014610) do
 
   create_table "gutentag_taggings", :force => true do |t|
     t.integer  "tag_id",        :null => false
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20131217055131) do
     t.string   "url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   create_table "statuses", :force => true do |t|
@@ -69,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20131217055131) do
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
-    t.string   "tit,     :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

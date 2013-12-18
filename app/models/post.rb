@@ -13,7 +13,7 @@
 #
 
 class Post < ActiveRecord::Base
-  attr_accessible :stream_id, :title, :message, :url
-  has_many_tags
+  attr_accessible :stream_id, :title, :message, :url, :tag_list
   belongs_to :user
+  acts_as_taggable
 end

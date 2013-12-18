@@ -25,6 +25,15 @@
       <%= f.text_field :url, :class => 'form-control', :placeholder => 'Enter Link URL here', :id => 'scrape_url', :value => params[:url] || @post.url || '' %>
     </div>
   </div>
+  <br>
+
+  <div class="form-group">
+      <%= f.label :tag_list, "Tags (seperated by commas)", :class => 'col-sm-1 control-label' %>
+    <div class="col-sm-5">
+      <%= f.text_field :tag_list %>
+    </div>
+  </div>
+
 <br>
   <div class="form-group">
     <%= f.label :message, :class => 'col-sm-1 control-label' %>

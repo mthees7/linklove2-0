@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def create
-
+    @post = Post.create params[:id]
     redirect_to stream_path(@stream)
   end
 

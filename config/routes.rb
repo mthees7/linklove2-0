@@ -5,9 +5,10 @@ LinkloveApp::Application.routes.draw do
     put "/confirm" => "confirmations#confirm"
   end
 
-  resources :streams
-  resources :posts
-
+  resources :streams do
+    resources :posts
+  end
+  resources :posts # un-nested version
 
   root :to => 'pages#home'
 

@@ -32,4 +32,12 @@ class Stream < ActiveRecord::Base
     @invited_user = email
   end
 
+  def message
+    @message
+  end
+
+  def message=(message)
+    @message = message
+  end
+
 end

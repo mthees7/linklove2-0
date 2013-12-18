@@ -19,6 +19,7 @@
             <%i = i + 1%>
               <span><%= link_to 'Edit', edit_stream_path(stream.id) %></span>
               <span><%= link_to 'Delete', stream_path(stream.id), :method => 'delete' %></span>
+              <!-- <span>< %= link_to '+ New Post', new_post_path %> -->
             </td>
           </tr>
         <%end%>

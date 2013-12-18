@@ -30,6 +30,8 @@ gem 'factory_girl_rails'
 gem 'gutentag', '~> 0.5.0'
 gem 'faker'
 gem 'carrierwave'
+gem 'rmagick'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'pry-rails'

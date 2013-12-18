@@ -1,5 +1,11 @@
+
 <h1> Stream View </h1>
 <div><%= image_tag @stream.image_url if @stream.image? %></div>
+
+
+<li><%= image_tag @stream.user.first.profile_pic_url(:thumb) if @stream.image? %></li>
+<li><%= image_tag @stream.user.last.profile_pic_url(:thumb) if @stream.image? %></li>
+
 
 <ol>
   <% @stream.posts.reverse.each do |post| %>

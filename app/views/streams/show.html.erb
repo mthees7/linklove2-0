@@ -1,7 +1,7 @@
 
 <h1> Stream View </h1>
 
-<h5><a href="<%= new_post_path %>">Click Here</a> to create a new post.</h5>
+<h5><a href="<%= new_stream_post_path(@stream) %>">Click Here</a> to create a new post.</h5>
 
 <div><%= image_tag @stream.image_url(:fit) if @stream.image? %></div>
 
@@ -20,7 +20,7 @@
 
       <% if post.user_id == current_user.id %>
         <li><a href="/posts/<%= post.id %>/edit">Edit Post</a></li>
-        <%= button_to "Delete", stream_post_path(post), :data => {:confirm => 'Are you sure?'}, :method => :delete %>
+        <%= button_to "Delete", post_path(post), :data => {:confirm => 'Are you sure?'}, :method => :delete %>
       <% end %>
       </ul>
     </li>

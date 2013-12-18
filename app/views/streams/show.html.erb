@@ -1,4 +1,7 @@
-<li><%= image_tag @stream.image_url if @stream.image? %></li>
+<li><%= image_tag @stream.image_url(:fit) if @stream.image? %></li>
+
+<li><%= image_tag @stream.user.first.profile_pic_url(:thumb) if @stream.image? %></li>
+<li><%= image_tag @stream.user.last.profile_pic_url(:thumb) if @stream.image? %></li>
 
 <ol>
   <% @stream.posts.each do |post| %>

@@ -1,6 +1,13 @@
-/*font-family: 'Roboto Slab', serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;*/
+@font-face {
+    font-family: 'nexa_boldregular';
+    src: url('/assets/Nexa_Free_Bold-webfont.eot');
+    src: url('/assets/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/Nexa_Free_Bold-webfont.woff') format('woff'),
+         url('/assets/Nexa_Free_Bold-webfont.ttf') format('truetype'),
+         url('/assets/Nexa_Free_Bold-webfont.svg#nexa_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .starter-template .h1 {
   font-family: "Roboto Slab";

@@ -5,7 +5,7 @@
 </head>
 <body>
   <h1>Hi there <%= @invited_user %>!</h1>
-  <p>Your friend <%= current_user.email %> has added you to one of his/her personal streams on LinkLove. Streams on LinkLove can only be between two people, so you must be very special.</p>
+  <p>Your friend <%= @current_user.email %> has added you to one of his/her personal streams on LinkLove. Streams on LinkLove can only be between two people, so you must be very special.</p>
 
   <%unless message.nil? %>
     <p>message from <%= @current_user.email %></p>

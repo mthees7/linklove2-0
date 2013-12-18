@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def create
     post = Post.new params[:post]
     post.user_id = current_user.id
-    stream.id = post.stream_id
+
     post.save
 
     redirect_to stream_path(post.stream_id)

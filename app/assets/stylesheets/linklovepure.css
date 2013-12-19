@@ -2,12 +2,28 @@
     font-family: 'nexa_boldregular';
     src: url('/assets/Nexa_Free_Bold-webfont.eot');
     src: url('/assets/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/Nexa_Free_Bold-webfont.woff') format('woff'),
-         url('/assets/Nexa_Free_Bold-webfont.ttf') format('truetype'),
-         url('/assets/Nexa_Free_Bold-webfont.svg#nexa_boldregular') format('svg');
+        url('/assets/Nexa_Free_Bold-webfont.woff') format('woff'),
+        url('/assets/Nexa_Free_Bold-webfont.ttf') format('truetype'),
+        url('/assets/Nexa_Free_Bold-webfont.svg#nexa_boldregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
+body.chrome-extension .navbar {
+  display: none;
+}
+
+input.btn.btn-success.chrome {
+  margin-left: 15px;
+}
+
+
+
+
+/*=====================================
+      Misc.
+=======================================*/
+
 
 .starter-template .h1 {
   font-family: "Roboto Slab";
@@ -27,3 +43,4 @@ div.col-md-5.cloud-thingy {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+

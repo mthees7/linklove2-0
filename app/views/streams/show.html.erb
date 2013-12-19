@@ -3,10 +3,8 @@
 
 </div> <!-- to close the container to apply full width backgrounds -->
 
-<!-- <div class="cover-photo">< %= image_tag @stream.image_url(:fit) if @stream.image? %></div> -->
-
 <div class="stream-header">
-  <div class="container">
+  <div class="container stream">
     <div class="user1">
       <li class="profile-photo prof-1">
         <!--
@@ -14,9 +12,8 @@
         -->
         <div class="avi" style="background-image:url(<%= @stream.users[0].profile_pic_url(:thumb) %>)"></div>
       </li>
-      <h1><%= number_to_percentage(number1.to_f / (number2 + number1) * 100, precision: 0) %></h1>
+      <div class="percentages-left"><h1><%= number_to_percentage(number1.to_f / (number2 + number1) * 100, precision: 0) %></h1></div>
     </div>
-
 
     <div class="user2">
       <li>
@@ -36,8 +33,7 @@
           <li>
             <ul>
               <div class="post-info">
-                <li><h3><%= post.title %></h3></li>
-                <li><a href="<%= post.url %>" target="_blank" data-rel="external">Check it out!</a></li>
+                <li><h3><%= post.title %> <span class="link"><a href="<%= post.url %>" target="_blank" data-rel="external">Check it out!</span></a></h3></li>
                 <li class="message"><%= post.message %></li>
                 <li class="tags">Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(post.stream_id, t) }.join(', ') %></li>
               </div>
@@ -54,6 +50,6 @@
     </ol>
    </div>
 </div>
-<div>
+<div> <!-- open div to match the closing tag from the container we escaped at the top -->
 
 

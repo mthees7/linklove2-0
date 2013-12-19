@@ -10,7 +10,7 @@
 #
 
 class Stream < ActiveRecord::Base
-  attr_accessible :name, :image #, :invited_user
+  attr_accessible :name, :image#, :invited_user
   has_many :posts
   has_many :memberships
   has_many :users, through: :memberships

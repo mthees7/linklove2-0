@@ -1,34 +1,25 @@
-<h1>Streams</h1>
+<div class="container">
+  <h1>Your Streams</h1>
 
-<div class="streams_table">
-  <%if current_user.streams.present? %>
+  <div class="streams_table">
+    <h5><a href="/streams/new">Click Here</a> to create a new stream.</h5>
+    <%if current_user.streams.present? %>
+      <%current_user.streams.each do |stream|%>
+        <!-- this should be the image we display (< %= image_tag stream.image_url(:fit) %>)'-->
+        <div class="cover-photo" style='background-image:url("http://placekitten.com/800/300")' >
+          <div class="stream-index-info">
+            <h1><a href="/streams/<%= stream.id %>"><%= stream.name %></a></h1>
+            <div class="stream-edit-options">
+              <span><%= link_to 'Edit', edit_stream_path(stream.id) %> |</span>
+              <span><%= link_to 'Delete', stream_path(stream.id), :data => {:confirm => 'Are you sure?'}, :method => 'delete' %></span>
+            </div>
+          </div>
+        </div>
+      <%end%>
 
-    <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke">
-      <thead>
-        <tr>
-          <th data-priority="1"></th>
-          <th data-priority="persist">Your Streams</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% i = 1 %>
-        <%current_user.streams.each do |stream|%>
-          <tr>
-            <th><%= i %></th>
-            <td><a href="/streams/<%= stream.id %>"><%= stream.name %></a>
-            <%i = i + 1%>
-              <span><%= link_to 'Edit', edit_stream_path(stream.id) %></span>
-              <span><%= link_to 'Delete', stream_path(stream.id), :method => 'delete' %></span>
-              <!-- <span>< %= link_to '+ New Post', new_post_path %> -->
-            </td>
-          </tr>
-        <%end%>
-        <h5><a href="/streams/new">Click Here</a> to create a new stream.</h5>
-      </tbody>
-    </table>
-
-  <%else%>
-    <h3>You don't have any Streams!</h3>
-    <h5><a href="/streams/new">Click Here</a> to create one.</h5>
-  <%end%>
+    <%else%>
+      <h3>You don't have any Streams!</h3>
+      <h5><a href="/streams/new">Click Here</a> to create one.</h5>
+    <%end%>
+  </div>
 </div>

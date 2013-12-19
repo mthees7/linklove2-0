@@ -17,7 +17,7 @@ class StreamsController < ApplicationController
   end
 
   def create
-    @stream = current_user.streams.new(params[:stream].except(:invited_user))
+    @stream = current_user.streams.new(params[:stream].except(:invited_user, :message))
 
     invited_user = User.find_by_email(params[:stream][:invited_user])
     if invited_user.nil?

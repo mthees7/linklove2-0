@@ -82,12 +82,14 @@ div.user1 {
   display: inline-block;
   text-align: right;
   margin-left: 100px;
+  height: 300px;
 }
 
 div.user2 {
   display: inline-block;
   float: right;
   margin-right: 100px;
+  height: 300px;
 }
 
 ol {
@@ -129,7 +131,7 @@ li.tags {
 }
 
 li.message {
-  padding-top: 10px;
+  padding-top: 1px;
   padding-bottom: 10px;
   font-weight: bold;
 }
@@ -170,11 +172,67 @@ div.percentages {
   text-align: center;
   border-radius: 50%;
   position: relative;
+  top: -100px;
+  color: white;
 }
 
-div.percentages h1 {
+div.percentages-left {
+  width: 100px;
+  height: 100px;
+  background-color: $blue_color;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+  top: -100px;
+  left: 150px;
+  color: white;
+}
+
+div.percentages h1,
+div.percentages-left h1 {
   padding-top: 28px;
 }
+
+div.container.stream {
+  height: 335px;
+}
+
+span.link {
+  font-size: 18px;
+}
+
+/*====================================
+      Streams Index
+====================================*/
+
+div.cover-photo {
+  width: 800px;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-position: center;
+  border-radius: 15px;
+}
+
+div.stream-index-info {
+  padding-top: 40px;
+  padding-left: 30px;
+}
+
+div.stream-index-info h1 {
+  font-size: 60px;
+}
+
+div.stream-index-info a {
+  color: white;
+}
+
+div.stream-edit-options {
+  margin-right: 80px;
+  float: right;
+  vertical-align: bottom;
+}
+
 
 /*====================================*/
 

@@ -8,13 +8,21 @@
 <div class="stream-header">
   <div class="container">
     <div class="user1">
-      <li class="profile-photo prof-1"><%= image_tag @stream.users[0].profile_pic_url(:thumb) if @stream.users[0].profile_pic? %></li>
+      <li class="profile-photo prof-1">
+        <!--
+        < %= image_tag @stream.users[0].profile_pic_url(:thumb) if @stream.users[0].profile_pic? %>
+        -->
+        <div class="avi" style="background-image:url(<%= @stream.users[0].profile_pic_url(:thumb) %>)"></div>
+      </li>
       <h1><%= number_to_percentage(number1.to_f / (number2 + number1) * 100, precision: 0) %></h1>
     </div>
 
+
     <div class="user2">
-      <li class="profile-photo prof-2"><%= image_tag @stream.users[1].profile_pic_url(:thumb) if @stream.users[1].profile_pic? %></li>
-      <h1><%= number_to_percentage(number2.to_f / (number1 + number2) * 100, precision: 0) %></h1>
+      <li>
+        <div class="avi" style="background-image:url(<%= @stream.users[1].profile_pic_url(:thumb) %>)"></div>
+      </li>
+      <div class="percentages"><h1><%= number_to_percentage(number2.to_f / (number1 + number2) * 100, precision: 0) %></h1></div>
     </div>
   </div> <!-- container -->
 </div>

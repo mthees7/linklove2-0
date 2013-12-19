@@ -20,7 +20,7 @@ $pink_color:   #e29090;
   width: 500px;
   height: 300px;
   margin: auto;
-  border: 1px solid lime;
+  // border: 1px solid lime;
 }
 
 #linklovelogo * {
@@ -33,30 +33,21 @@ $pink_color:   #e29090;
   color: $red_color;
   font-size: 200px;
   top: 50px;
+  text-shadow: 2px 2px $nav_color;
+  -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: silver;
 }
 
 #linklovelogo h1 {
-  margin-left: -74px;
+  margin-left: -125px;
   font-family: $logo_font;
-  color: $red_color;
+  color: $blue_color;
+  font-size: 60px;
+  top: 80px;
+  text-shadow: 2px 2px $nav_color;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $nav_color;
 }
-
-#logo-image {
-    position:absolute;
-    left:0;
-    top:0;
-}
-
-#logo-text {
-    z-index:100;
-    position:absolute;
-    color:white;
-    font-size:24px;
-    font-weight:bold;
-    left:150px;
-    top:350px;
-}
-
 
 /*=====================================
     Stream Show
@@ -253,6 +244,11 @@ footer {
   background-color: $nav_color;
 }
 
+footer p {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .container-home {
   width: 100%;
 }
@@ -264,10 +260,19 @@ footer {
 
 .starter-template.home.bottom {
   background-color: $blue_color;
+  color: white;
+}
+
+.starter-template.home.bottom i {
+  font-size: 50px;
 }
 
 .starter-template.home.top {
   background-color: $white_color;
+}
+
+.col-lg-4 p, h2 {
+  color: white;
 }
 
 @font-face {
@@ -284,6 +289,22 @@ footer {
 input.btn.btn-success.chrome {
   margin-left: 15px;
 }
+
+i.hp-icons {
+  font-size: 120px;
+  margin-top: 40px;
+  color: white;
+}
+
+div.home {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+// div.hp {
+//   padding-top: 50px;
+//   padding-bottom: 50px;
+// }
 
 /*=====================================
       Misc.

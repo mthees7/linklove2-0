@@ -64,6 +64,9 @@ div.cover-photo {
 
 .profile-photo img {
   border-radius: 50%;
+  margin-top: 20px;
+/*  height: 250px;
+  width: 250px;*/
 }
 
 div.user1 {
@@ -128,6 +131,40 @@ div.stream-header {
 }
 div.posts-background {
   background-color: $yellow_color;
+}
+
+.avi {
+  height: 250px;
+  width: 250px;
+  border: 5px solid $white_color;
+  margin-top: 20px;
+  /*background-size: cover-x;*/
+  background-position: center;
+  border-radius: 50%;
+}
+
+div.progress-container {
+  background-color: $yellow_color;
+  width: 500px;
+  margin: auto;
+}
+
+div.progress.progress-striped {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+div.percentages {
+  width: 100px;
+  height: 100px;
+  background-color: $blue_color;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+div.percentages h1 {
+  padding-top: 28px;
 }
 
 /*====================================*/

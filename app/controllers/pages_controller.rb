@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :check_if_logged_in, :only =>[:streamify]
+  before_filter :check_if_logged_in, :only =>[:streamify, :chrome_streamify]
 
   def home
   end
@@ -11,6 +11,12 @@ class PagesController < ApplicationController
     #make sure user is logged in, if not, prompt login to activate session before proceding
       ##need access to users streams
     #display form to share the page that the bookmarklet was clicked from
+  end
+
+  def chrome_streamify
+
+    @post = Post.new
+    session[:url] = nil
   end
 
   def public_stream

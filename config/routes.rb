@@ -13,6 +13,7 @@ LinkloveApp::Application.routes.draw do
   root :to => 'pages#home'
 
   get '/streamify' => 'pages#streamify'
+  get '/chrome/streamify' => 'pages#chrome_streamify'
   get '/public-stream' => 'pages#public_stream'
   get '/streams/:id/:tag', to: 'streams#index_by_tag', as: :tag
 

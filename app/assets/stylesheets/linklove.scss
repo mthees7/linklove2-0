@@ -3,5 +3,36 @@ $body_font:    Roboto, sans-serif;
 $logo_font:    Nexa Free Bold;
 $nav_color:    #242F3E;
 $red_color:    #ac5353;
-$yellow_color: #FEE500;
+$yellow_color: #FEEC6A;
 $blue_color:   #2D89D1;
+$white_color: #F7F7F7;
+$pink_color: #e29090;
+
+p {
+  font-family: $body_font;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $heading_font;
+}
+
+.home-container {
+  width: 100
+}
+
+.row {
+  background-color: $pink_color;
+  margin: 0px;
+}
+
+.starter-template {
+  background-color: $yellow_color;
+}
+
+.starter-template.home.bottom {
+  background-color: $blue_color;
+}
+
+.starter-template.home.top {
+  background-color: $white_color;
+}

@@ -9,9 +9,6 @@
     font-style: normal;
 }
 
-body.chrome-extension .navbar {
-  display: none;
-}
 
 input.btn.btn-success.chrome {
   margin-left: 15px;

@@ -14,7 +14,7 @@ test:
   database: linklove_app_test
   pool: 5
   host: localhost
-  username: nickdoherty
+  username: matthewthees
   password:
   cucumber:
 

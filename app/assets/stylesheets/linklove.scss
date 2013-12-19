@@ -1,12 +1,61 @@
 $heading_font: Roboto Slab, serif;
 $body_font:    Roboto, sans-serif;
-$logo_font:    Nexa Free Bold;
-$nav_color:    #242F3E;
+$logo_font:    nexa_boldregular;
+$nav_color:    #2c3e50;
 $red_color:    #ac5353;
 $yellow_color: #FEEC6A;
 $blue_color:   #2D89D1;
-$white_color: #F7F7F7;
-$pink_color: #e29090;
+$white_color:  #F7F7F7;
+$pink_color:   #e29090;
+
+.starter-template {
+  background-color: $yellow_color;
+  // height:400px;
+  // width:400px;
+  // position:relative;
+}
+
+#linklovelogo {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  margin: auto;
+  border: 1px solid lime;
+}
+
+#linklovelogo * {
+  position: absolute;
+  left: 50%;
+}
+
+#linklovelogo i {
+  margin-left: -100px;
+  color: $red_color;
+  font-size: 200px;
+  top: 50px;
+}
+
+#linklovelogo h1 {
+  margin-left: -74px;
+  font-family: $logo_font;
+  color: $red_color;
+}
+
+#logo-image {
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+#logo-text {
+    z-index:100;
+    position:absolute;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    left:150px;
+    top:350px;
+}
 
 p {
   font-family: $body_font;
@@ -16,17 +65,22 @@ h1, h2, h3, h4, h5 {
   font-family: $heading_font;
 }
 
-.home-container {
-  width: 100
+.navbar-inverse {
+  background-color: $nav_color;
+  // border-color: #E7E7E7;
+}
+
+footer {
+  background-color: $nav_color;
+}
+
+.container-home {
+  width: 100%;
 }
 
 .row {
   background-color: $pink_color;
   margin: 0px;
-}
-
-.starter-template {
-  background-color: $yellow_color;
 }
 
 .starter-template.home.bottom {
@@ -35,4 +89,42 @@ h1, h2, h3, h4, h5 {
 
 .starter-template.home.top {
   background-color: $white_color;
+}
+
+@font-face {
+    font-family: 'nexa_boldregular';
+    src: url('/assets/Nexa_Free_Bold-webfont.eot');
+    src: url('/assets/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/assets/Nexa_Free_Bold-webfont.woff') format('woff'),
+        url('/assets/Nexa_Free_Bold-webfont.ttf') format('truetype'),
+        url('/assets/Nexa_Free_Bold-webfont.svg#nexa_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+input.btn.btn-success.chrome {
+  margin-left: 15px;
+}
+
+/*=====================================
+      Misc.
+=======================================*/
+
+.starter-template .h1 {
+  font-family: "Roboto Slab";
+}
+
+div.col-md-5.nice-stuff {
+  height: 400px;
+  background-color: grey;
+}
+
+div.col-md-5.cloud-thingy {
+  height: 400px;
+  background-color: yellow;
+}
+
+.public {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

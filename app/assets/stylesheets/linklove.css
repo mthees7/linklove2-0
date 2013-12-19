@@ -9,6 +9,22 @@
     font-style: normal;
 }
 
+body.chrome-extension .navbar {
+  display: none;
+}
+
+input.btn.btn-success.chrome {
+  margin-left: 15px;
+}
+
+
+
+
+/*=====================================
+      Misc.
+=======================================*/
+
+
 .starter-template .h1 {
   font-family: "Roboto Slab";
 }
@@ -27,3 +43,5 @@ div.col-md-5.cloud-thingy {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+

@@ -13,28 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20131218042141) do
 
-  create_table "gutentag_taggings", :force => true do |t|
-    t.integer  "tag_id",        :null => false
-    t.integer  "taggable_id",   :null => false
-    t.string   "taggable_type", :null => false
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  add_index "gutentag_taggings", ["tag_id"], :name => "index_gutentag_taggings_on_tag_id"
-  add_index "gutentag_taggings", ["taggable_type", "taggable_id", "tag_id"], :name => "unique_taggings", :unique => true
-  add_index "gutentag_taggings", ["taggable_type", "taggable_id"], :name => "index_gutentag_taggings_on_taggable_type_and_taggable_id"
-
-  create_table "gutentag_tags", :force => true do |t|
-    t.string   "name",                          :null => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-    t.integer  "taggings_count", :default => 0, :null => false
-  end
-
-  add_index "gutentag_tags", ["name"], :name => "index_gutentag_tags_on_name", :unique => true
-  add_index "gutentag_tags", ["taggings_count"], :name => "index_gutentag_tags_on_taggings_count"
-
   create_table "memberships", :force => true do |t|
     t.integer  "user_id"
     t.integer  "stream_id"

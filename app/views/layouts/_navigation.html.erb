@@ -2,8 +2,11 @@
   <% if user_signed_in? %>
     <li><%= link_to 'Streams', streams_path %></li>
     <li><%= link_to 'Edit account', edit_user_registration_path %></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li class="go-right">Logged in as <strong><%= current_user.email %></strong></li>
     <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
-    <li>Logged in as <strong><%= current_user.email %></strong></li>
+  </ul>
   <% else %>
     <li><%= link_to 'Sign in', new_user_session_path %></li>
     <li><%= link_to 'Sign up', new_user_registration_path %></li>

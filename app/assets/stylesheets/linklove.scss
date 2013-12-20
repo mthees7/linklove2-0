@@ -291,6 +291,10 @@ footer p {
   font-size: 50px;
 }
 
+.starter-template.home.bottom a {
+  color: white;
+}
+
 .starter-template.home.top {
   background-color: $white_color;
 }
@@ -323,6 +327,35 @@ i.hp-icons {
 div.home {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+footer a {
+  color: white;
+}
+
+div.row.form {
+  background-color: $yellow_color;
+}
+
+form {
+  color: black;
+}
+
+// .form {
+//   color: black;
+// }
+
+div.row.form input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+li.post-links {
+  padding-bottom: 10px;
+}
+
+li.tags {
+
 }
 
 // div.hp {

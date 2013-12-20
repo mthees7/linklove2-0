@@ -236,6 +236,8 @@ div.stream-index-info {
 
 div.stream-index-info h1 {
   font-size: 60px;
+  text-shadow: 4px 4px $nav_color;
+  -webkit-text-stroke-width: 3px;
 }
 
 div.stream-index-info a {
@@ -247,6 +249,7 @@ div.stream-edit-options {
   float: right;
   vertical-align: bottom;
 }
+
 
 
 /*====================================*/
@@ -384,4 +387,10 @@ div.col-md-5.cloud-thingy {
 .public {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  position: absolute;
 }

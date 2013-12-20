@@ -50,6 +50,6 @@ class StreamsController < ApplicationController
   def update
     @stream = Stream.find params[:id]
     @stream.update_attributes(params[:stream].except(:invited_user, :message))
-    redirect_to stream_path(@stream)
+    redirect_to streams_path
   end
 end

@@ -5,8 +5,9 @@
     <h5><a href="/streams/new">Click Here</a> to create a new stream.</h5>
     <%if current_user.streams.present? %>
       <%current_user.streams.each do |stream|%>
-        <!-- this should be the image we display (< %= image_tag stream.image_url(:fit) %>)'-->
-        <div class="cover-photo" style='background-image:url("http://placekitten.com/800/300")' >
+        <!-- this should be the image we display (<%= image_tag stream.image_url(:fit) %>)'-->
+
+        <div class="cover-photo" style='background-image:url("<%= stream.image_url(:fit) %>")' >
           <div class="stream-index-info">
             <h1><a href="/streams/<%= stream.id %>"><%= stream.name %></a></h1>
             <div class="stream-edit-options">

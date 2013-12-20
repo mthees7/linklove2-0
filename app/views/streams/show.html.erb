@@ -33,13 +33,13 @@
           <li>
             <ul>
               <div class="post-info">
-                <li><h3><%= post.title %> <span class="link"><a href="<%= post.url %>" target="_blank" data-rel="external">Check it out!</span></a></h3></li>
+                <li><h3><%= post.title %> <span class="link"><a href="<%= post.url %>" target="_blank" data-rel="external">Open link.</span></a></h3></li>
                 <li class="message"><%= post.message %></li>
-                <li class="tags">Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(post.stream_id, t) }.join(', ') %></li>
+                <li class="tags">Tags: <%= raw post.tag_list.map { |t| link_to(t, tag_path(post.stream_id, t), :class => 'btn btn-xs btn-primary') }.join('  ') %></li>
               </div>
             <% if post.user_id == current_user.id %>
               <div class="creator-links">
-                <li class="post-links"><a href="<%= edit_stream_post_path(@stream.id, post.id) %>">Edit</a></li>
+                <li class="post-links"><a class="btn btn-xs btn-warning" href="<%= edit_stream_post_path(@stream.id, post.id) %>">Edit</a></li>
                 <li class="post-links"><%= button_to "Delete", post_path(post), :class => 'btn btn-xs btn-danger', :data => {:confirm => 'Are you sure?'}, :method => :delete %></li>
               </div>
             <% end %>

@@ -37,7 +37,6 @@ body.chrome-extension .navbar {
   <%= render 'layouts/messages' %>
 
     <%= yield %>
-
 </body>
 
 <footer>
@@ -46,6 +45,7 @@ body.chrome-extension .navbar {
     <p>&copy; 2013 LinkLove, Inc. &middot;</p>
   <div>
 </footer>
-
-
+  <% if Rails.env.production? %>
+  <%= render :partial => 'layouts/googletracking' %>
+  <%end%>
 </html>

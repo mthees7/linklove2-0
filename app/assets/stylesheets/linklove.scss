@@ -192,6 +192,30 @@ span.link {
   font-size: 18px;
 }
 
+div.share-links {
+  display: block;
+  margin-bottom: 30px;
+}
+
+div.share-links a.btn {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+li.go-right {
+  padding-top: 14px;
+  color: white;
+}
+
+a.home-logo {
+  font-family: $logo-font;
+  font-size: 24px;
+}
+
+.nav a {
+  font-family: $body-font;
+}
+
 /*====================================
       Streams Index
 ====================================*/

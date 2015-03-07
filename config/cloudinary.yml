@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: linklove-us
+  api_key: '798772868992554'
+  api_secret: 8taknUUKpaU3cc6u4sB9lejPT1k
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: linklove-us
+  api_key: '798772868992554'
+  api_secret: 8taknUUKpaU3cc6u4sB9lejPT1k
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: linklove-us
+  api_key: '798772868992554'
+  api_secret: 8taknUUKpaU3cc6u4sB9lejPT1k
+  enhance_image_tag: true
+  static_image_support: false
